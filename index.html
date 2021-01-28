@@ -4,146 +4,203 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap"
-        rel="stylesheet">
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <link rel="stylesheet" href="./styles/basico.css">
     <title>Pipa Launch</title>
 </head>
 
 <body>
     <header>
-        <div class="titulo">
-            <span class="iconify" data-icon="vscode-icons:file-type-kite" data-inline="false"></span>
-            <h1>Pipa Launch</h1>
-        </div>
-        <nav>
+        <img src="./assets/identidade-visual-pipa.svg" alt="logo" />
+        <button id="botao-menu">
             <span class="iconify" data-icon="gg:menu" data-inline="false"></span>
-            <ul>
-                <li>Quem somos nós</li>
-                <li>Nossa equipe</li>
-                <li>Nosso modelo</li>
-                <li>Contato</li>
-            </ul>
-        </nav>
+        </button>
     </header>
+    <nav id="nav">
+        <ul class="menu-items">
+            <li>
+                <a href="#sobre">Quem somos nós</a>
+            </li>
+            <li>
+                <a href="#equipe">Nossa equipe</a>
+            </li>
+            <li>
+                <a href="#modelo">Nosso modelo</a>
+            </li>
+            <li>
+                <a href="#contato">Contato</a>
+            </li>
+        </ul>
+    </nav>
     <main>
         <section class="hero">
             <h1>VOE COM A PIPA</h1>
             <p>Lance o seu negócio para as alturas</p>
-            <button>Saiba quem somos</button>
+            <button>
+                <a href="#sobre">Saiba quem somos</a>
+            </button>
         </section>
         <section class="lancamento-digital">
-            <h2>Com a gente, o céu é o limite do seu negócio</h2>
+            <h2>Com a gente, <br class="line-break" />o céu é o limite do seu negócio</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices imperdiet nibh dui feugiat ornare
                 phasellus ac turpis amet. Iaculis dapibus venenatis lectus maecenas auctor sit lectus ultricies. Mattis
                 semper ut a non, facilisis. Vitae facilisi felis vel egestas. Cras duis diam nec dui gravida.</p>
         </section>
-        <section class="sobre-nos">
-            <span class="iconify" data-icon="vscode-icons:file-type-kite" data-inline="false"></span>
-            <h1>Quem somos nós</h1>
+        <div class="fundo-pipa">
+            <section id="sobre" class="sobre-nos">
+                <div class="titulo">
+                    <span class="iconify" data-icon="vscode-icons:file-type-kite" data-inline="false"></span>
+                    <h1>Quem somos nós</h1>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices imperdiet nibh dui feugiat ornare
+                    phasellus ac turpis amet. Iaculis dapibus venenatis lectus maecenas auctor sit lectus ultricies.
+                    Mattis
+                    semper ut a non, facilisis. Vitae facilisi felis vel egestas. Cras duis diam nec dui gravida.</p>
+            </section>
+            <section id="equipe" class="equipe">
+                <div class="titulo">
+                    <span class="iconify" data-icon="vscode-icons:file-type-kite" data-inline="false"></span>
+                    <h1>Nossa equipe</h1>
+                </div>
+                <article class="perfil">
+                    <!-- <img src="" alt="" class="foto"> -->
+                    <p>Montes, hendrerit at sit quam volutpat enim arcu odio nulla ultricies nulla lectus porttitor et
+                        proin
+                    </p>
+                </article>
+                <article class="perfil">
+                    <!-- <img src="" alt="" class="foto"> -->
+                    <p>Montes, hendrerit at sit quam volutpat enim arcu odio nulla ultricies nulla lectus porttitor et
+                        proin
+                    </p>
+                </article>
+                <article class="perfil">
+                    <!-- <img src="" alt="" class="foto"> -->
+                    <p>Montes, hendrerit at sit quam volutpat enim arcu odio nulla ultricies nulla lectus porttitor et
+                        proin
+                    </p>
+                </article>
+                <article class="perfil">
+                    <!-- <img src="" alt="" class="foto"> -->
+                    <p>Montes, hendrerit at sit quam volutpat enim arcu odio nulla ultricies nulla lectus porttitor et
+                        proin
+                    </p>
+                </article>
+            </section>
+            <button>
+                <a href="#contato">Consulte conosco</a>
+            </button>
+        </div>
+        <section id="modelo" class="modelo">
+            <div class="titulo">
+                <span class="iconify" data-icon="vscode-icons:file-type-kite" data-inline="false"></span>
+                <h1>Nosso modelo</h1>
+            </div>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices imperdiet nibh dui feugiat ornare
                 phasellus ac turpis amet. Iaculis dapibus venenatis lectus maecenas auctor sit lectus ultricies. Mattis
                 semper ut a non, facilisis. Vitae facilisi felis vel egestas. Cras duis diam nec dui gravida.</p>
-        </section>
-        <section class="equipe">
-            <span class="iconify" data-icon="vscode-icons:file-type-kite" data-inline="false"></span>
-            <h1>Nossa equipe</h1>
-            <article class="perfil">
-                <!-- <img src="" alt="" class="foto"> -->
-                <p>Montes, hendrerit at sit quam volutpat enim arcu odio nulla ultricies nulla lectus porttitor et proin
-                </p>
-            </article>
-            <article class="perfil">
-                <!-- <img src="" alt="" class="foto"> -->
-                <p>Montes, hendrerit at sit quam volutpat enim arcu odio nulla ultricies nulla lectus porttitor et proin
-                </p>
-            </article>
-            <article class="perfil">
-                <!-- <img src="" alt="" class="foto"> -->
-                <p>Montes, hendrerit at sit quam volutpat enim arcu odio nulla ultricies nulla lectus porttitor et proin
-                </p>
-            </article>
-            <article class="perfil">
-                <!-- <img src="" alt="" class="foto"> -->
-                <p>Montes, hendrerit at sit quam volutpat enim arcu odio nulla ultricies nulla lectus porttitor et proin
-                </p>
-            </article>
-        </section>
-        <button>Consulte conosco</button>
-        <section class="modelo">
-            <span class="iconify" data-icon="vscode-icons:file-type-kite" data-inline="false"></span>
-            <h1>Nosso modelo</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices imperdiet nibh dui feugiat ornare
-                phasellus ac turpis amet. Iaculis dapibus venenatis lectus maecenas auctor sit lectus ultricies. Mattis
-                semper ut a non, facilisis. Vitae facilisi felis vel egestas. Cras duis diam nec dui gravida.</p>
-            <article class="cartao">
-                <span class="iconify" data-icon="mdi:rocket-launch-outline" data-inline="false"></span>
-                <h2>Lançamento</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices imperdiet nibh dui feugiat ornare
-                    phasellus ac turpis amet. Iaculis dapibus venenatis lectus maecenas auctor sit lectus ultricies.
-                    Mattis
-                    semper ut a non, facilisis. Vitae facilisi felis vel egestas. Cras duis diam nec dui gravida.</p>
-            </article>
-            <article class="cartao">
-                <span class="iconify" data-icon="mdi:rocket-launch-outline" data-inline="false"></span>
-                <h2>Lançamento</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices imperdiet nibh dui feugiat ornare
-                    phasellus ac turpis amet. Iaculis dapibus venenatis lectus maecenas auctor sit lectus ultricies.
-                    Mattis
-                    semper ut a non, facilisis. Vitae facilisi felis vel egestas. Cras duis diam nec dui gravida.</p>
-            </article>
-            <article class="cartao">
-                <span class="iconify" data-icon="mdi:rocket-launch-outline" data-inline="false"></span>
-                <h2>Lançamento</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices imperdiet nibh dui feugiat ornare
-                    phasellus ac turpis amet. Iaculis dapibus venenatis lectus maecenas auctor sit lectus ultricies.
-                    Mattis
-                    semper ut a non, facilisis. Vitae facilisi felis vel egestas. Cras duis diam nec dui gravida.</p>
-            </article>
-            <article class="cartao">
-                <span class="iconify" data-icon="mdi:rocket-launch-outline" data-inline="false"></span>
-                <h2>Lançamento</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices imperdiet nibh dui feugiat ornare
-                    phasellus ac turpis amet. Iaculis dapibus venenatis lectus maecenas auctor sit lectus ultricies.
-                    Mattis
-                    semper ut a non, facilisis. Vitae facilisi felis vel egestas. Cras duis diam nec dui gravida.</p>
-            </article>
+            <div class="cartoes">
+                <article class="cartao">
+                    <span class="iconify" data-icon="mdi:rocket-launch-outline" data-inline="false"></span>
+                    <h2>Lançamento</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices imperdiet nibh dui feugiat
+                        ornare
+                        phasellus ac turpis amet. Iaculis dapibus venenatis lectus maecenas auctor sit lectus ultricies.
+                        Mattis
+                        semper ut a non, facilisis. Vitae facilisi felis vel egestas. Cras duis diam nec dui gravida.
+                    </p>
+                </article>
+                <article class="cartao">
+                    <span class="iconify" data-icon="mdi:rocket-launch-outline" data-inline="false"></span>
+                    <h2>Lançamento</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices imperdiet nibh dui feugiat
+                        ornare
+                        phasellus ac turpis amet. Iaculis dapibus venenatis lectus maecenas auctor sit lectus ultricies.
+                        Mattis
+                        semper ut a non, facilisis. Vitae facilisi felis vel egestas. Cras duis diam nec dui gravida.
+                    </p>
+                </article>
+                <article class="cartao">
+                    <span class="iconify" data-icon="mdi:rocket-launch-outline" data-inline="false"></span>
+                    <h2>Lançamento</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices imperdiet nibh dui feugiat
+                        ornare
+                        phasellus ac turpis amet. Iaculis dapibus venenatis lectus maecenas auctor sit lectus ultricies.
+                        Mattis
+                        semper ut a non, facilisis. Vitae facilisi felis vel egestas. Cras duis diam nec dui gravida.
+                    </p>
+                </article>
+                <article class="cartao">
+                    <span class="iconify" data-icon="mdi:rocket-launch-outline" data-inline="false"></span>
+                    <h2>Lançamento</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices imperdiet nibh dui feugiat
+                        ornare
+                        phasellus ac turpis amet. Iaculis dapibus venenatis lectus maecenas auctor sit lectus ultricies.
+                        Mattis
+                        semper ut a non, facilisis. Vitae facilisi felis vel egestas. Cras duis diam nec dui gravida.
+                    </p>
+                </article>
+            </div>
         </section>
         <section class="cliente">
-            <span class="iconify" data-icon="vscode-icons:file-type-kite" data-inline="false"></span>
-            <h1>O que você precisa fazer?</h1>
+            <div class="titulo">
+                <span class="iconify" data-icon="vscode-icons:file-type-kite" data-inline="false"></span>
+                <h1 class="longo">O que você precisa fazer?</h1>
+            </div>
             <article class="etapa">
-                <h2>Preparar aulas</h2>
-                <p>Fusce pharetra imperdiet quisque laoreet. In arcu fringilla aliquam consequat, auctor eu arcu, arcu.
-                    Sit non malesuada ipsum, neque gravida. Eget orci eget aenean sit nunc maecenas ut. Interdum mauris
-                    aenean neque.</p>
+                <div class="octogono">
+                    <h2>Preparar aulas</h2>
+                </div>
+                <div class="retangulo">
+                    <p>Fusce pharetra imperdiet quisque laoreet. In arcu fringilla aliquam consequat, auctor eu arcu,
+                        arcu.
+                        Sit non malesuada ipsum, neque gravida. Eget orci eget aenean sit nunc maecenas ut. Interdum
+                        mauris
+                        aenean neque.</p>
+                </div>
             </article>
             <article class="etapa">
-                <h2>Gerar conteúdo</h2>
-                <p>Fusce pharetra imperdiet quisque laoreet. In arcu fringilla aliquam consequat, auctor eu arcu, arcu.
-                    Sit non malesuada ipsum, neque gravida. Eget orci eget aenean sit nunc maecenas ut. Interdum mauris
-                    aenean neque.</p>
+                <div class="octogono">
+                    <h2>Gerar conteúdo</h2>
+                </div>
+                <div class="retangulo">
+                    <p>Fusce pharetra imperdiet quisque laoreet. In arcu fringilla aliquam consequat, auctor eu arcu,
+                        arcu.
+                        Sit non malesuada ipsum, neque gravida. Eget orci eget aenean sit nunc maecenas ut. Interdum
+                        mauris
+                        aenean neque.</p>
+                </div>
             </article>
             <article class="etapa">
-                <h2>Planejamento</h2>
-                <p>Fusce pharetra imperdiet quisque laoreet. In arcu fringilla aliquam consequat, auctor eu arcu, arcu.
-                    Sit non malesuada ipsum, neque gravida. Eget orci eget aenean sit nunc maecenas ut. Interdum mauris
-                    aenean neque.</p>
+                <div class="octogono">
+                    <h2>Planejamento</h2>
+                </div>
+                <div class="retangulo">
+                    <p>Fusce pharetra imperdiet quisque laoreet. In arcu fringilla aliquam consequat, auctor eu arcu,
+                        arcu.
+                        Sit non malesuada ipsum, neque gravida. Eget orci eget aenean sit nunc maecenas ut. Interdum
+                        mauris
+                        aenean neque.</p>
+                </div>
             </article>
         </section>
-        <section class="contato">
-            <span class="iconify" data-icon="vscode-icons:file-type-kite" data-inline="false"></span>
-            <h1>Contato</h1>
-            <div>
-                <span class="iconify" data-icon="jam:whatsapp" data-inline="false"></span>
-                <p>Whatsapp (62) 99876-5432</p>
+        <section id="contato" class="contato">
+            <div class="titulo">
+                <span class="iconify" data-icon="vscode-icons:file-type-kite" data-inline="false"></span>
+                <h1>Contato</h1>
             </div>
-            <div>
-                <span class="iconify" data-icon="ic:outline-email" data-inline="false"></span>
-                <p>E-mail: exemplo@gmail.com</p>
+            <div class="contato-grid">
+                <div class="losango">
+                    <span class="iconify" data-icon="jam:whatsapp" data-inline="false"></span>
+                </div>
+                <p>Whatsapp: <br />(62) 99876-5432</p>
+                <div class="losango">
+                    <span class="iconify" data-icon="ic:outline-email" data-inline="false"></span>
+                </div>
+                <p>E-mail: <br />exemplo@gmail.com</p>
             </div>
             <form action="">
+                <h2>Voe com a gente</h2>
                 <label for="nome">Nome:</label>
                 <br />
                 <input type="text" name="nome" id="nome">
@@ -160,6 +217,18 @@
             </form>
         </section>
     </main>
+    <script>
+        const btn = document.querySelector('#botao-menu')
+        const menu = document.querySelector('#nav')
+        let aberto = false
+        btn.addEventListener('click', () => {
+            console.log('*click* ' + aberto + ' *click*')
+            aberto
+                ? menu.style.transform = `translateY(-20rem)`
+                : menu.style.transform = `translateY(0)`
+            aberto = !aberto
+        })
+    </script>
 </body>
 
 </html>

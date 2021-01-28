@@ -1,0 +1,471 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap');
+
+$fundo: #1f1e1b;
+$texto: #f5f5f5;
+$prim: #e7b10f;
+$sec: #2c3033;
+$terc: #0a0a0a;
+
+$font: 'Jost', sans-serif;
+
+:root {
+  font-size: 18px;
+  font-family: $font;
+}
+
+@media (min-width: 600px) {
+  :root {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 900px) {
+  :root {
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 1200px) {
+  :root {
+    font-size: 24px;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  border: none;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: $fundo;
+}
+
+h1 {
+  font-size: 2rem;
+  color: $prim;
+}
+
+p {
+  line-height: 1.8;
+  color: $texto;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+}
+
+@mixin flex($dir: column, $jus: center, $ali: center, $wrap: nowrap) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: $jus;
+  align-items: $ali;
+  flex-wrap: $wrap;
+}
+
+@mixin btn {
+  width: 13rem;
+  height: 3rem;
+  background-color: $prim;
+  color: $sec;
+  font: 700 24px $font;
+}
+
+@mixin svgColor {
+  filter: invert(55%) sepia(97%) saturate(428%) hue-rotate(8deg) brightness(110%) contrast(88%);
+}
+
+@mixin mobile {
+  @media (max-width: 599px) { @content; }
+}
+
+@mixin tablet-ver {
+  @media (min-width: 600px) { @content; }
+}
+
+@mixin tablet-hor-down {
+  @media (max-width: 899px) { @content; }
+}
+
+@mixin tablet-hor {
+  @media (min-width: 900px) { @content; }
+}
+
+@mixin laptop {
+  @media (min-width: 1200px) { @content; }
+}
+
+@mixin desktop {
+  @media (min-width: 1800px) { @content; }
+}
+
+.line-break {
+  @include tablet-ver {
+    display: none;
+  }
+}
+
+.titulo {
+  @include flex(row, center);
+
+  h1 {
+    font: 500 36px $font;
+  }
+  
+  .iconify {
+    width: 3rem;
+    height: 3rem;
+    @include svgColor();
+  }
+  
+  .longo {
+    width: 13rem;
+  }
+}
+
+header {
+  @include flex(row, space-between);
+  position: absolute;
+  top:0;
+  z-index: 1;
+  width: 100vw;
+  height: 5rem;
+  background-color: $fundo;
+
+  img {
+    height: 5rem;
+    @include svgColor();
+  }
+
+  button {
+    padding: .25rem;
+    border-radius: 4px;
+    margin-right: 1rem;
+    background-color: $fundo;
+    @include tablet-hor {
+      display: none;
+    }
+
+    &:hover,
+    &:active {
+      background-color: $sec;
+    }
+    
+    .iconify {
+      width: 2.5rem;
+      height: 2.5rem;
+      color: $prim;
+    }
+  }
+}
+
+  nav {
+    position: absolute;
+    top: 5rem;
+    right: 0;
+    background-color: $sec;
+    transition: transform 800ms;
+    @include tablet-hor-down {
+      transform: translateY(-20rem);
+    }
+    @include tablet-hor {
+      top: 0;
+      z-index: 1;
+      background-color: #0000;
+      transform: translateY(0);
+    }
+    
+    ul {
+      @include flex($jus: space-evenly);
+      width: 100vw;
+      height: 12rem;
+      @include tablet-hor {
+        @include flex(row, space-evenly);
+        width: 67vw;
+        height: 5rem;
+      }
+      
+      li {
+        list-style: none;
+
+        a {
+          color: $prim;
+        }
+      }
+    }
+  }
+
+main {
+
+  p {
+    font: 18px $font;
+  }
+
+  .hero {
+    @include flex($jus: end);
+    height: 100vh;
+    padding: 2rem 0;
+    background: url('../assets/lampada.jpg') center/cover;
+
+    h1 {
+      font: 300 44px $font;
+      @include tablet-ver {
+        font-size: 60px;
+      }
+      @include tablet-hor {
+        font-size: 76px;
+      }
+      @include laptop {
+        font-size: 84px;
+      }
+    }
+
+    p {
+      margin-bottom: 1rem;
+      font: italic 14px $font;
+      @include tablet-ver {
+        font-size: 24px;
+      }
+      @include tablet-hor {
+        font-size: 30px;
+      }
+      @include laptop {
+        font-size: 36px;
+      }
+    }
+
+    button {
+      @include btn();
+
+      a {
+        color: $sec;
+      }
+    }
+  }
+
+  .lancamento-digital {
+    @include flex($jus: space-between);
+    height: 100vh;
+    background: url('../assets/ceu.jpg') center/cover;
+
+    h2 {
+      padding: 1rem 0;
+      font: 500 24px $font;
+      text-align: center;
+      color: $prim;
+      @include tablet-ver {
+        font-size: 32px;
+      }
+      @include tablet-hor {
+        font-size: 36px;
+      }
+      @include laptop {
+        font-size: 42px;
+      }
+    }
+
+    p {
+      padding: 1rem;
+      text-align: justify;
+      @include tablet-ver {
+        width: 64vw;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+
+  .fundo-pipa {
+    @include flex($ali: center);
+    padding: 1rem 0;
+    background: url('../assets/pipa.jpg') center/cover;
+
+    .sobre-nos {
+
+      p {
+        padding: 1rem;
+        text-align: justify;
+        @include tablet-ver {
+          width: 64vw;
+          margin: 1rem 0;
+        }
+      }
+    }
+
+    .equipe {
+      
+      p {
+        padding: 1rem;
+        @include tablet-ver {
+          width: 64vw;
+          margin: 1rem 0;
+        }
+      }
+    }
+    
+    button {
+      @include btn();
+      margin: 1rem auto;
+
+      a {
+        color: $sec;
+      }
+    }
+  }
+
+  .modelo {
+    @include flex($jus: space-evenly);
+    padding: 1rem 0;
+
+    & > p {
+      padding: 1rem;
+      margin: 1rem auto;
+      text-align: justify;
+      @include tablet-ver {
+        width: 64vw;
+      }
+    }
+
+    .cartoes {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 2rem;
+      justify-content: center;
+      align-items: center;
+      @include tablet-ver {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .cartao {
+        @include flex();
+        width: 14rem;
+        padding: 1rem 0;
+        border-radius: 5px;
+        background-color: $prim;
+
+        .iconify, h2, p {
+          color: $fundo;
+        }
+
+        .iconify {
+          width: 4rem;
+          height: 4rem;
+        }
+
+        h2 {
+          font: 500 30px $font;
+          text-decoration: underline;
+        }
+
+        p {
+          padding: 1rem;
+          font: 500 18px $font;
+        }
+      }
+    }
+  }
+
+  .cliente {
+    @include tablet-ver {
+      @include flex(row, $wrap: wrap);
+    }
+
+    .titulo {
+      width: 100%;
+    }
+
+    .etapa {
+      @include flex();
+      margin: 1rem;
+
+      .octogono {
+        @include flex();
+        width: 10rem;
+        height: 10rem;
+        background-color: $prim;
+        clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+
+        h2 {
+          text-align: center;
+          color: $fundo;
+        }
+      }
+
+      .retangulo {
+        width: 12rem;
+        background-color: $sec;
+
+        p {
+          padding: 1rem;
+          text-align: justify;
+        }
+      }
+    }
+  }
+
+  .contato {
+
+    .contato-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 1rem 0;
+      margin: 1.5rem 0;
+      @include tablet-ver {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .losango {
+        justify-self: end;
+        @include flex();
+        width: 7rem;
+        height: 7rem;
+        background-color: $prim;
+        clip-path: polygon(50% 0%, 85% 20%, 50% 100%, 15% 20%);
+  
+        .iconify {
+          width: 3rem;
+          height: 3rem;
+          margin-bottom: 3rem;
+          color: $fundo;
+        }
+      }
+    }
+
+    form {
+      @include flex($jus: space-between);
+      width: 16rem;
+      height: 24rem;
+      margin: 1rem auto;
+      background-color: $terc;
+      color: $prim;
+
+      h2 {
+        font: 32px $font;
+      }
+
+      label {
+        margin-left: 1.5rem;
+        align-self: flex-start;
+      }
+      
+      input {
+        width: 13rem;
+        height: 3rem;
+        margin-bottom: .5rem;
+        background-color: $sec;
+        color: $texto;
+      }
+
+      input[type="submit"] {
+        @include btn();
+        width: 8rem;
+      }
+    }
+  }
+}
