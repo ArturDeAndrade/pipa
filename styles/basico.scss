@@ -466,6 +466,10 @@ main {
         @include btn();
         width: 8rem;
       }
+
+      input[type="checkbox"] {
+        width: 1rem;
+      }
     }
   }
 }
